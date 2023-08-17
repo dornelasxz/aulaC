@@ -19,7 +19,7 @@ int main(){
         printf("Bom!\n");
     }
     else if(media >= 9){
-        printf("Exelente!!!\n");
+        printf("Exelente!!\n");
     }
     
     
