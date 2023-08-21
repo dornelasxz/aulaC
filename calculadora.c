@@ -1,15 +1,40 @@
 #include <stdio.h> 
 
     int main(){
-         int numero1;
-         int numero2;
-         int resultado;
+         long long int numero1;
+         long long int numero2;
+         long long int resultado;
+         char operacao;
 
-        numero1 = 2147483645;
-        numero2 = 3;
-        resultado = numero1 + numero2;
+        printf("Insira uma operacao:\n");
+        scanf("%c" , &operacao);
+
+        printf("Insira dois numeros:\n");
+        scanf("%lld", &numero1);
+        scanf("%lld", &numero2);
+
+        if(operacao != '+' && operacao != '-' && operacao != '*' && operacao != '/' && operacao != '%'){
+            printf("OPERACAO INVALIDA!!\n");
+        } else {
+        if(operacao == '+'){
+            resultado = numero1 + numero2;
+        } else if(operacao == '-'){
+            resultado = numero1 - numero2;
+        } else if(operacao == '*'){
+            resultado = numero1 * numero2;
+        } else if(operacao == '/'){
+            resultado = numero1 / numero2;
+        } else if(operacao == '%'){
+            resultado = numero1 % numero2;
+        } 
+        printf("resultado: %lld\n" , resultado);
+        printf("operacao: %c\n", operacao);
+        }
+
 
         
-        printf("resultado: %d\n", resultado);
+
+
         return 0;
+
     }
