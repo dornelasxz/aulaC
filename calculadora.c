@@ -1,18 +1,15 @@
 #include <stdio.h> 
 
     int main(){
-        int numero1;
-        int numero2;
-        int resultado;
+         int numero1;
+         int numero2;
+         int resultado;
 
-        numero1 = 20622662;
-        numero2 = 10;
-        resultado = numero1 % numero2;
+        numero1 = 2147483645;
+        numero2 = 3;
+        resultado = numero1 + numero2;
 
         
-
-
-
-        printf("ultimo algarismo de %d: %d\n", numero1, resultado);
+        printf("resultado: %d\n", resultado);
         return 0;
     }
