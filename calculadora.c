@@ -33,7 +33,7 @@
         } else if(operacao == '>' && numero1 == numero2){
                 printf("%lld igual a %lld \n", numero1, numero2);
         } else {
-            printf("OPERACAO INVALIDA!!!\n");
+            printf("OPERACAO INVALIDA!!\n");
         }
         
         
