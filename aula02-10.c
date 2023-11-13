@@ -1,16 +1,40 @@
 #include <stdio.h>
-#include <stdlib.h>
-//como declaro minha função
-//dizer o tipo do retorno
-//dizer o numero de parametros e seus tipos
-int soma(int a, int b){ 
-    printf("Executando a soma de a + b (%d + %d)...\n", a ,b);
-    return a + b;
+
+void processWindow(int values[], int size) {
+    int new_size = (size + 1) / 2;
+    for (int i = 0; i < new_size; i++) {
+        values[i] = values[i * 2] + values[i * 2 + 1];
+    }
 }
-int main(){
-    int resultado;
-    resultado = soma(1, 3);//chamar a função 
-    printf("resultado de %d + %d soma = %d!\n", resultado);
+
+int main() {
+    int input_values[10];
+    
+    // Ler os valores de entrada
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &input_values[i]);
+    }
+
+    int size = 10;
+    for (int i = 0; i < 10; i++) {
+        printf("%d", input_values[i]);
+        if (i < 9) {
+            printf(" ");
+        }
+    }
+    printf("\n");
+
+    while (size > 1) {
+        processWindow(input_values, size);
+        for (int i = 0; i < size; i++) {
+            printf("%d", input_values[i]);
+            if (i < size - 1) {
+                printf(" ");
+            }
+        }
+        printf("\n");
+        size = (size + 1) / 2;
+    }
 
     return 0;
 }
